@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Slide out DIV from Header</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="generator" content="BBEdit 10.5" />
+	</head>
+<body>
+
+<script>
+$(document).scroll(function () { // remove "$"
+    var y = $(this).scrollTop();       
+    console.debug('Y Position = ' + y) 
+    if (y < 2) {
+        $('.scroll_div').slideDown();
+    }
+    
+    if (y > 80){
+    	 $('.scroll_div').slideUp();
+    }
+});
+</script>
+
+<div id='mainhead'>This is just a top banner - put anything here!</div>
+<div class="scroll_div">Hello! Im heeere</divs>
+
+</body>
+</html>
